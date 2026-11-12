@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alpenüberquerung E5 2027 – Oberstdorf bis Meran</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#eef3f4;--card:#fff;--ink:#1d2b33;--mute:#5a6b74;--line:#d3dde1;--blue:#2f7f9a;--green:#5c8a45;--warm:#c8641e;--hero:#1d3a4a;--herotxt:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121c21;--card:#1b2830;--ink:#e6eef1;--mute:#98aab3;--line:#2e3f48;--blue:#5db4d1;--green:#8bbd72;--warm:#f0914d;--hero:#0e2531;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121c21;--card:#1b2830;--ink:#e6eef1;--mute:#98aab3;--line:#2e3f48;--blue:#5db4d1;--green:#8bbd72;--warm:#f0914d;--hero:#0e2531;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hero);z-index:10}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700;line-height:1.1;margin:0}
+header{background:var(--hero);color:var(--herotxt);padding:28px 20px 22px}
+header div{max-width:960px;margin:auto}
+header h1{font-size:clamp(34px,7vw,60px);letter-spacing:.01em}
+header p{margin:8px 0 0;opacity:.85;max-width:60ch}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--hero);border-top:1px solid rgba(255,255,255,.15);overflow-x:auto;white-space:nowrap}
+nav div{max-width:960px;margin:auto;display:flex;padding:0 12px}
+nav button{font:600 16px "Source Sans 3",system-ui,sans-serif;color:#fff;opacity:.7;background:none;border:0;border-bottom:3px solid transparent;padding:13px 14px;cursor:pointer}
+nav button[aria-selected=true]{opacity:1;border-bottom-color:var(--warm)}
+nav button:focus-visible,summary:focus-visible,svg a:focus-visible{outline:3px solid var(--warm);outline-offset:-3px}
+main{max-width:960px;margin:auto;padding:22px 16px 48px}
+section{display:none}section.on{display:block}
+h2{font-size:32px;margin:6px 0 14px}
+h3{font-size:22px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.big{font:700 34px/1 "Barlow Condensed","Arial Narrow",Arial,sans-serif;color:var(--blue)}
+.lbl{color:var(--mute);font-size:15px;margin-top:4px}
+.sub{color:var(--mute);margin:0 0 14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px}
+summary{cursor:pointer;padding:14px 16px;list-style:none;display:flex;gap:12px;align-items:center;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--blue)}
+details[open] summary::after{content:"–"}
+summary b{display:block;font:700 22px/1.15 "Barlow Condensed","Arial Narrow",Arial,sans-serif}
+summary span{color:var(--mute);font-size:15px}
+summary>div{flex:1}
+.det{padding:0 16px 16px;border-top:1px solid var(--line)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0}
+.kv div{font-size:15px;color:var(--mute)}.kv strong{display:block;color:var(--ink);font-size:18px}
+.tag{display:inline-block;font-size:14px;font-weight:600;border-radius:99px;padding:2px 10px;background:var(--line);color:var(--ink)}
+.ok{background:#d7ecd0;color:#244a17}.wait{background:#ffe7b3;color:#6a4500}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ok{background:#27421d;color:#c9e8bc}:root:not([data-theme="light"]) .wait{background:#59420a;color:#ffe2a3}}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:620px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:16px}
+th{font-weight:600;color:var(--mute);font-size:15px}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--blue)}
+.tl li{position:relative;margin:0 0 14px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.tl li::before{content:"";position:absolute;left:-27px;top:18px;width:11px;height:11px;border-radius:50%;background:var(--warm);border:2px solid var(--bg)}
+.tl b{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-size:20px}
+.bars div{display:grid;grid-template-columns:64px 1fr 74px;gap:10px;align-items:center;margin:8px 0;font-size:15px}
+.bars i{display:block;height:16px;border-radius:4px;background:var(--green)}
+.pack{columns:2 240px;list-style:none;padding:0;margin:0}
+.pack li{break-inside:avoid;padding:5px 0}
+.pack label{cursor:pointer}
+.pack input{accent-color:var(--blue);margin-right:8px;width:18px;height:18px;vertical-align:-3px}
+svg text{fill:var(--ink);font:600 13px "Source Sans 3",system-ui,sans-serif}
+svg a{cursor:pointer}
+.note{border-left:4px solid var(--warm);padding:6px 12px;margin:14px 0 0;color:var(--mute);font-size:15px}
+@media (prefers-reduced-motion:no-preference){section.on{animation:in .25s ease}@keyframes in{from{opacity:.4}to{opacity:1}}}
+</style>
+</head>
+<body>
+<header><div>
+<h1>Alpenüberquerung E5 2027</h1>
+<p>Von Oberstdorf über Kemptner Hütte, Memminger Hütte, Zams, Pitztal und Ötztal bis nach Meran. 20. bis 28. Juli 2027, Start und Ziel in Köln.</p>
+</div></header>
+<nav role="tablist" aria-label="Bereiche"><div id="tabs"></div></nav>
+<main>
+<section id="ueberblick">
+<h2>Überblick</h2>
+<p class="sub">Sieben Wandertage, höchster Punkt am Similaun-Übergang. Tippe auf einen Punkt im Profil, um die Etappe zu öffnen.</p>
+<div class="box" style="padding:10px 6px"><svg id="prof" viewBox="0 0 640 230" width="100%" role="img" aria-label="Höchster Punkt jeder Etappe in Metern"></svg></div>
+<div class="grid" style="margin-top:14px" id="kpi"></div>
+<p class="note">Etappe 5 (Braunschweiger Hütte – Martin-Busch-Hütte) ist mit 21 km und rund 9,5 Stunden die Königsetappe.</p>
+</section>
+
+<section id="weg">
+<h2>Der Weg</h2>
+<p class="sub">Tag für Tag. Die Werte stammen aus den Routenprofilen der Planung.</p>
+<div id="stages"></div>
+</section>
+
+<section id="unterkuenfte">
+<h2>Unterkünfte</h2>
+<p class="sub">Buchungsstand laut Planung. Hütten früh reservieren, 6 bis 9 Monate vorher.</p>
+<div class="wrap"><table id="huts"></table></div>
+<p class="note">Offen: Kemptner Hütte (per Mail angefragt, buchbar ab Mitte Dezember) und die Verlegung der Skihütte Zams. Alternativen dort: Venet Gipfelhütte, Galfunalm oder Zams Tal.</p>
+</section>
+
+<section id="zeit">
+<h2>Zeitplan</h2>
+<p class="sub">Abmarsch und späteste Ankunft pro Tag.</p>
+<ol class="tl" id="tl"></ol>
+</section>
+
+<section id="fakten">
+<h2>Zahlen und Fakten</h2>
+<div class="grid" id="facts"></div>
+<h3 style="margin:26px 0 10px">Aufstieg pro Etappe</h3>
+<div class="box bars" id="bars"></div>
+<h3 style="margin:26px 0 10px">Packliste</h3>
+<div class="box"><ul class="pack" id="pack"></ul></div>
+<p class="note">Rucksack richtig packen vorher üben. Bei Etappe 5 gibt es à la carte nur bis 17 Uhr.</p>
+</section>
+</main>
+<script>
+var S=[
+{n:1,d:"21.07.",t:"Oberstdorf – Kemptner Hütte",km:14.7,gz:"max. 5,5 Std.",up:1030,down:10,max:1830,min:810,von:"10:00",bis:"16:30",info:"Anreise per Bus nach Oberstdorf (Ankunft 9:30), eine Pause von 1 Std.",eink:"Einkehr: Christlessee nach 6,5 km, Spielmannsau nach 8,5 km (wahrscheinlich Ruhetag), Alpe Oberau nach 9 km."},
+{n:2,d:"22.07.",t:"Kemptner Hütte – Memminger Hütte",km:15,gz:"6,5 Std.",up:1110,down:930,max:2220,min:1100,von:"08:00",bis:"16:00",info:"Start über das Mädlejoch, dazu ca. 15 km per Bus oder Taxi. Pause 1 Std. in Holzgau."},
+{n:3,d:"23.07.",t:"Memminger Hütte – Skihütte Zams",km:15,gz:"ca. 7 Std.",up:370,down:1820,max:2550,min:760,von:"08:00",bis:"17:00",info:"Start über die Seescharte, Ankunft in Zams (Ort) um 16:00. Mit der Venet-Bergbahn zur Mittelstation, alternativ Aufstieg (+3 Std., 4,3 km, 970 hm). Mögliches Highlight: Rodelbahn."},
+{n:4,d:"24.07.",t:"Skihütte Zams – Braunschweiger Hütte",km:19,gz:"ca. 9 Std. inkl. Transfer",up:1150,down:1340,max:2730,min:1010,von:"08:00",bis:"17:00",info:"Start an der Venetbahn-Mittelstation (zum Krahberg). Bustransfer von Wenns nach Mittelberg (1 Std.) als Pause nutzen."},
+{n:5,d:"25.07.",t:"Braunschweiger Hütte – Martin-Busch-Hütte",km:21,gz:"8 Std. + Bus",up:880,down:1260,max:2970,min:1890,von:"07:30",bis:"17:00",info:"Königsetappe. Über das Pitztaler Jöchl statt Rettenbachjoch, Bustransfer durch den Rosi-Mittermaier-Tiefenbachtunnel, 1 Std. Pause am Rettenbachgletscher. A la carte nur bis 17 Uhr."},
+{n:6,d:"26.07.",t:"Martin-Busch-Hütte – Stausee Vernagt",km:10.4,gz:"ca. 5 Std.",up:500,down:1300,max:3000,min:1700,von:"08:00",bis:"15:00",info:"Über Similaunhütte und Ötzi-Fundstelle. Danach Relaxen im Hotel, Abendessen eventuell im Finailhof."},
+{n:7,d:"27.07.",t:"Stausee Vernagt – Meran",km:14,gz:"ca. 6 Std.",up:750,down:null,max:1530,min:1200,von:"08:00",bis:"15:00",info:"Bus nach Katharinaberg (25 Min.), zu Fuß bis Giggelberg, dann Bus nach Meran. Danach Hotel Aurora und 3 Std. Therme."}];
+var H=[
+["Bollwerk Lifestyle Hotel, Immenstadt","20.07.","Gebucht, stornierbar bis 17.07.","172 € insgesamt",1],
+["Kemptner Hütte","21.07.","Noch nicht buchbar, per Mail angefragt, ab Mitte Dezember","ca. 25 € pro Person (Ü)",0],
+["Memminger Hütte (Alternative: Württemberger Haus)","22.07.","Zimmer gebucht, inkl. Frühstück","130 € Ü gesamt, HP 48 € pro Person",1],
+["Skihütte Zams","23.07.","Zimmer gebucht, Verlegung beantragt","83 € pro Person inkl. HP, 149 € angezahlt",0],
+["Braunschweiger Hütte","24.07.","Mehrbettzimmer gebucht","72 € Ü insgesamt",1],
+["Martin-Busch-Hütte","25.07.","Bettenlager gebucht","52 € Ü insgesamt, Frühstück 19 €, HP 51 €",1],
+["Hotel Vernagt","26.07.","Gebucht","400 € insgesamt",1],
+["Hotel Aurora, Meran","27.07.","Gebucht, direkt","298 €",1],
+["Bustransfer Prenner","28.07.","Gebucht, Abfahrt 8:00 Meran Bahnhof","55 € pro Person",1]];
+var P=["Alpenvereinsausweis","Hüttenschlafsack","Müsliriegel und Gels","Elektrolyt-Tabs","Sonnencreme","Wanderapotheke (Blasenpflaster, Paracetamol)","Wanderführer","Wasserflaschen","Sonnenbrille","Ohropax","Ladekabel und Powerbank"];
+var $=function(i){return document.getElementById(i)};
+var fmt=function(n){return n.toLocaleString("de-DE")};
+var T=[["ueberblick","Überblick"],["weg","Weg"],["unterkuenfte","Unterkünfte"],["zeit","Zeit"],["fakten","Fakten"]];
+$("tabs").innerHTML=T.map(function(t){return '<button role="tab" data-t="'+t[0]+'">'+t[1]+'</button>'}).join("");
+function show(id){if(!T.some(function(t){return t[0]===id}))id="ueberblick";
+T.forEach(function(t){$(t[0]).classList.toggle("on",t[0]===id)});
+document.querySelectorAll("#tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.t===id)});
+if(location.hash.slice(1)!==id)history.replaceState(null,"","#"+id);window.scrollTo(0,0)}
+$("tabs").onclick=function(e){var t=e.target.dataset&&e.target.dataset.t;if(t)show(t)};
+window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
+// Etappen
+$("stages").innerHTML=S.map(function(s){return '<details id="e'+s.n+'"><summary><div><b>Etappe '+s.n+': '+s.t+'</b><span>'+s.d+' · '+String(s.km).replace(".",",")+' km · '+fmt(s.up)+' hm Aufstieg</span></div></summary><div class="det"><div class="kv"><div>Gehzeit<strong>'+s.gz+'</strong></div><div>Aufstieg<strong>'+fmt(s.up)+' m</strong></div><div>Abstieg<strong>'+(s.down==null?"–":fmt(s.down)+" m")+'</strong></div><div>Höchster Punkt<strong>'+fmt(s.max)+' m</strong></div></div><p style="margin:0 0 8px">'+s.info+'</p>'+(s.eink?'<p style="margin:0 0 8px;color:var(--mute)">'+s.eink+'</p>':'')+'<span class="tag">Abmarsch '+s.von+'</span> <span class="tag">Ankunft spätestens '+s.bis+'</span></div></details>'}).join("");
+// Unterkünfte
+$("huts").innerHTML='<tr><th>Unterkunft</th><th>Datum</th><th>Status</th><th>Kosten</th></tr>'+H.map(function(h){return '<tr><td><b>'+h[0]+'</b></td><td>'+h[1]+'</td><td><span class="tag '+(h[4]?"ok":"wait")+'">'+(h[4]?"Gebucht":"Offen")+'</span><br>'+h[2]+'</td><td>'+h[3]+'</td></tr>'}).join("");
+// Zeit
+var tl='<li><b>20.07. Anreise Köln – Immenstadt</b><br>Abfahrt 9:00, Ankunft spätestens 16:30. 593 km mit 2 Ladestops, Abendessen bei Hotburry Burger.</li>';
+tl+=S.map(function(s){return '<li><b>'+s.d+' Tag '+s.n+': '+s.t+'</b><br>Abmarsch '+s.von+', Ankunft spätestens '+s.bis+' ('+s.gz+')</li>'}).join("");
+tl+='<li><b>28.07. Rückfahrt Meran – Oberstdorf – Köln</b><br>6:30 Frühstück, 7:30 Abmarsch Hotel, 8:00 Bus ab Meran Bahnhof, 13:30 Oberstdorf, 14:00 Abfahrt, 22:00 Ankunft in Köln.</li>';
+$("tl").innerHTML=tl;
+// Fakten
+var km=S.reduce(function(a,s){return a+s.km},0),up=S.reduce(function(a,s){return a+s.up},0);
+var K=[[7,"Wandertage"],["ca. "+Math.round(km),"Kilometer zu Fuß"],["ca. "+fmt(Math.round(up/100)*100),"Höhenmeter Aufstieg"],["3.000 m","höchster Punkt"],["21 km","längste Etappe (Tag 5)"],["10,4 km","kürzeste Etappe (Tag 6)"]];
+$("kpi").innerHTML=K.slice(0,4).map(function(k){return '<div class="box"><div class="big">'+k[0]+'</div><div class="lbl">'+k[1]+'</div></div>'}).join("");
+var F=K.concat([["593 km","Anreise Köln – Immenstadt, ca. 7 Std. 37 Min."],["608 km","Rückfahrt Oberstdorf – Köln, ca. 7 Std. 50 Min."]]);
+$("facts").innerHTML=F.map(function(k){return '<div class="box"><div class="big">'+k[0]+'</div><div class="lbl">'+k[1]+'</div></div>'}).join("");
+var mx=Math.max.apply(null,S.map(function(s){return s.up}));
+$("bars").innerHTML=S.map(function(s){return '<div><span>Tag '+s.n+'</span><i style="width:'+Math.round(s.up/mx*100)+'%"></i><span>'+fmt(s.up)+' m</span></div>'}).join("");
+$("pack").innerHTML=P.map(function(p,i){return '<li><label><input type="checkbox">'+p+'</label></li>'}).join("");
+// Höhenprofil
+var W=640,L=44,R=20,top=26,bot=190,lo=1400,hi=3200;
+var X=function(i){return L+i*(W-L-R)/(S.length-1)},Y=function(v){return bot-(v-lo)/(hi-lo)*(bot-top)};
+var pts=S.map(function(s,i){return X(i)+","+Y(s.max)}).join(" ");
+var g="";[1500,2000,2500,3000].forEach(function(v){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="4" y="'+(Y(v)+4)+'" style="font-weight:400;font-size:12px">'+fmt(v)+' m</text>'});
+g+='<polygon points="'+X(0)+","+bot+" "+pts+" "+X(6)+","+bot+'" fill="var(--blue)" opacity=".22"/><polyline points="'+pts+'" fill="none" stroke="var(--blue)" stroke-width="3" stroke-linejoin="round"/>';
+S.forEach(function(s,i){g+='<a href="#weg" data-n="'+s.n+'" tabindex="0"><circle cx="'+X(i)+'" cy="'+Y(s.max)+'" r="'+(s.n===5?9:7)+'" fill="'+(s.n===5?"var(--warm)":"var(--card)")+'" stroke="var(--blue)" stroke-width="3"/><text x="'+X(i)+'" y="'+(Y(s.max)-15)+'" text-anchor="middle">'+fmt(s.max)+'</text><text x="'+X(i)+'" y="'+(bot+22)+'" text-anchor="middle">Tag '+s.n+'</text></a>'});
+$("prof").innerHTML=g;
+function open(n){show("weg");var d=$("e"+n);d.open=true;d.scrollIntoView({block:"start"})}
+$("prof").addEventListener("click",function(e){var a=e.target.closest("a");if(a){e.preventDefault();open(a.dataset.n)}});
+$("prof").addEventListener("keydown",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(a.dataset.n)}});
+show(location.hash.slice(1));
+</script>
+</body>
+</html>
